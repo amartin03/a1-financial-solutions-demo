@@ -1,0 +1,254 @@
+body {
+    font-family: Monofur; 
+    background-image: url('images/bd.jpg'); /* Path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+
+h2, h3 {
+    font-family: Monofur; 
+    color: #000000;
+    text-align: center; /* Centers headings */
+}
+
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly increased opacity for better readability */
+    border: 2px solid #207cca; /* Matches theme color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow for depth */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Distinguish labels */
+}
+
+input[type="text"], input[type="date"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Monofur; /* Standard input font */
+}
+
+input[type="submit"], .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Monofur;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type="submit"]:hover, .btn:hover {
+    background-color: #218838;
+}
+
+/* Popup styling */
+.popupMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: Monofur;
+}
+
+.popup-content button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Monofur;
+}
+
+.popup-content button:hover {
+    background-color: #218838;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
+}
+
+table, th, td {
+    padding: 10px;
+    border: 1px solid #207cca; /* Matches theme color */
+}
+
+th {
+    background-color: #207cca; /* Red header for emphasis */
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase; /* Bold and uppercase for headers */
+}
+td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    color: #000000;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+/* Footer */
+footer {
+    background-color: #207cca;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed; /* Fixed footer */
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-family: Monofur;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form, .popup-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    table {
+        font-size: 15px; /* Adjust table font size for smaller screens */
+    }
+
+    th, td {
+        padding: 5px;
+    }
+}
+
+.disabled {
+    color: gray;
+    pointer-events: none;
+    text-decoration: none;
+}
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Monofur;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+}
+.btn:hover {
+    background-color: #45a049;
+    
+}
+.red-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.red-btn:hover {
+    background-color: #d32f2f;
+}
+/* Button Styles */
+.button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-family: Monofur;
+}
+  /* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    gap: 0px;
+}
+.pagination a.active {
+    background: #207cca;
+}
+.pagination a, .pagination span {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background: #207cca;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.pagination a:hover {
+    background-color: #f0f2f5;
+}
+
+.pagination .current {
+    background-color: #207cca;
+    color: white;
+    border-color: #207cca;
+}
+.status-active {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #f39c12;
+    font-weight: bold;
+}
